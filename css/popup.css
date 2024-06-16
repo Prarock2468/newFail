@@ -1,0 +1,175 @@
+.popup_drop_shadow {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(transparent, var(--second_color));
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  z-index: 20000;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3 all;
+}
+
+.showPopup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup_container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup_body {
+  padding: 35px;
+  border-radius: 13px;
+  border: 1px solid #ffe0b240;
+  background: var(--second_color);
+  width: 100%;
+  max-width: 450px;
+}
+
+.title_form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title_form h3 {
+  font-size: 170%;
+  font-weight: 500;
+  color: #fff;
+  font-family: 'Josefin Sans';
+}
+
+span.close_popup {
+  font-size: 160%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 17px;
+}
+
+.form_wrapper {
+  margin-top: 40px;
+}
+
+.form_group {
+  flex: 1 0 calc(50% - 20px);
+}
+
+.form_input {
+  height: 45px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #ffe0b245;
+  padding: 13px;
+  border-radius: 3px;
+  outline: none;
+  color: inherit;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  background: transparent !important;
+  border: 1px solid #ffe0b245 !important;
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px transparent inset !important;
+  background: transparent !important;
+  border: 1px solid #ffe0b245 !important;
+  color: inherit !important;
+  -moz-text-fill-color: inherit !important;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: fieldtext !important;
+}
+
+input.form_checkbox {
+  height: 25px;
+  width: 25px;
+  background: transparent;
+}
+
+.form_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+  font-size: 80%;
+  color: #fff;
+}
+
+.term_link {
+  position: relative;
+  transition: .3s all;
+  color: #fff;
+  cursor: pointer;
+}
+
+.term_link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primari_color);
+  left: 0;
+  transition: .3s all;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.term_link:hover {
+  color: var(--primari_color);
+}
+
+.term_link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.he-48 {
+  height: 45px;
+  border: 0;
+  width: 100%;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 29px;
+}
+
+.filp_from {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  gap: 10px;
+  align-items: center;
+  font-size: 82%;
+}

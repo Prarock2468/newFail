@@ -1,0 +1,380 @@
+/* availibility form */
+.availibility_form_wrapper {
+  position: relative;
+  margin-top: -100px;
+  z-index: 12;
+}
+
+.availibility_form {
+  margin: auto;
+  padding: 50px;
+  background: #fff;
+  max-width: 1140px;
+  text-align: center;
+  box-shadow: 0px 24px 28px -27px #2f2f2f2f;
+  position: relative;
+}
+
+.availibility_form h3 {
+  font-size: 310%;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.availibility_form::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: #0d1e33;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: center;
+  width: 100%;
+  transition: width 0.8s linear;
+}
+
+.availibility_form:hover::after {
+  width: 0;
+
+}
+
+/* availibility form */
+
+
+
+.hero_banner_wrapper {
+  padding: 240px 0 0;
+  position: relative;
+  background-image: radial-gradient(transparent, var(--second_color)), url('../image/image3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.subtitle {
+  color: var(--primari_color);
+  font-size: 154%;
+}
+
+.hero_title {
+  font-size: 305%;
+  font-weight: 700;
+  color: var(--white);
+  margin: 6px 0 30px;
+  line-height: 115%;
+}
+
+.hero_content p {
+  font-size: 100%;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 157%;
+}
+
+.hero_content {
+  max-width: 750px;
+}
+
+
+@keyframes left {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+/* swiper slider */
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.hero_banner_wrapper .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.hero_banner_wrapper .swiper-container .swiper-wrapper .swiper-slide {
+  overflow: hidden;
+}
+
+.slide_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(transparent, var(--second_color))
+}
+
+.hero_banner_wrapper .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.swiper-slide-active .subtitle {
+  animation: fadeInUp;
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
+
+.swiper-slide-active .subtitle {
+  animation: hero_title;
+  --animate-duration: 800ms;
+  --animate-delay: 1s;
+}
+
+.swiper-slide-active p {
+  animation: hero_title;
+  --animate-duration: 800ms;
+  --animate-delay: 1s;
+}
+
+.hero_banner_wrapper .swiper-container .swiper-wrapper .swiper-slide img.is-play {
+  animation-name: zoom;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* news letter css  */
+section.newsLetter_wrapper {
+  background: #0d1e33;
+  background-image: linear-gradient(rgb(13 30 51), rgb(13 30 51 / 35%)), url(./../image/bg_image.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 21px 0;
+}
+
+.dark_color {
+  background: var(--primari_color) !important;
+  border-color: var(--primari_color);
+  border-radius: 56px;
+}
+
+.news_col_right {
+  max-width: 500px;
+  display: flex;
+  width: 100%;
+}
+
+.news_title {
+  font-size: 246%;
+  color: var(--white);
+  line-height: 121%;
+  position: relative;
+  width: fit-content;
+  font-family: 'Cormorant Garamond';
+}
+
+img.new_title_image {
+  position: absolute;
+  height: 90px;
+  top: 0px;
+  right: 45px;
+}
+
+img.news_starImage {
+  height: 83px;
+  margin-bottom: 15px;
+}
+
+p.form_news_text {
+  color: var(--white);
+  font-family: 'Josefin Sans';
+  line-height: 100%;
+  margin-top: 7px;
+}
+
+.subscribe_from {
+  background: var(--white);
+  max-width: 100%;
+  border-radius: 66px;
+  overflow: hidden;
+  padding: 4px;
+  display: flex;
+  width: 100%;
+}
+
+.news_col_left {
+  max-width: 500px;
+  width: 100%;
+}
+
+.form_wrapper_news {
+  width: 100%;
+}
+
+.dark_color {
+  width: 140px;
+}
+
+.subscribe_from input[type="email"] {
+  max-width: calc(100% - 140px);
+  width: 100%;
+  font-family: 'Josefin Sans';
+  padding: 0 15px;
+  border: 0;
+  background: transparent;
+  border-radius: 20px;
+  outline: none;
+  height: 40px;
+}
+
+.news_row {
+  align-items: flex-end;
+  display: flex;
+  gap: 90px;
+  justify-content: center;
+}
+
+.new_content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 20px;
+}
+
+.isceland {
+  font-size: 483%;
+  background: -webkit-linear-gradient(#004D40, #f0c604);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 12px 0px 0px #2f2f2f2f;
+}
+
+@media screen and (max-width:1200px) {
+  .news_row {
+    gap: 40px
+  }
+
+  .news_col_right {
+    max-width: 382px;
+  }
+
+  .dark_color {
+    width: auto;
+  }
+
+  .subscribe_from {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width:992px) {
+  .news_title {
+    font-size: 185%;
+  }
+
+  .news_col_left {
+    max-width: 323px;
+  }
+
+  p.form_news_text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+  }
+
+  .isceland {
+    font-size: 370%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .news_row {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .news_col_left,
+  .news_col_left {
+    max-width: 320px;
+  }
+}
+
+/* news letter css end  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.video {
+  width: 100%;
+}
+
+.wrapper {
+  display: table;
+  position: relative;
+  width: 100%;
+  max-height: 550px;
+  height: 100%;
+}
+
+
+.imageoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../image/de-9.jpeg');
+  background-position: top center;
+  background-size: cover;
+}
+.playpause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}

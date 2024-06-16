@@ -1,0 +1,82 @@
+.tours_section {
+    padding: 120px 0 60px;
+    position: relative;
+}
+
+.tour_card {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    transition: .5s;
+}
+
+.tour_card:hover .tour_card_image_wrap {
+    transition: .5s;
+    box-shadow: 2px 4px 10px #2f2f2fb3;
+}
+
+.tour_card_text {
+    font-size: 120%;
+    color: #000;
+    font-weight: 700;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
+    padding: 8px 0
+}
+
+.tour_card_image_wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.tour_card_image_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transform: scale(1);
+    transition: .5s;
+}
+
+.tour_card:hover .tour_card_image_wrap img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.swiper_btn2 .swiper-button-next {
+    top: 58%;
+    right: 90px;
+    background: none;
+    fill: var(--primari_color);
+    transition: .5s;
+    transform: scale(1) translateY(-50%);
+}
+
+.swiper_btn2 .swiper-button-next:hover {
+    transform: scale(1.2);
+}
+
+.swiper_btn2 .swiper-button-prev {
+    left: 20px;
+    top: 58%;
+    transform: scale(1) translateY(-50%);
+    transition: .5s;
+}
+
+.swiper_btn2 .swiper-button-prev:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width:992px) {
+    .tours_section {
+        padding: 60px 0 0px;
+    }
+}
